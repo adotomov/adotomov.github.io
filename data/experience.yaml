@@ -1,0 +1,57 @@
+jobs:
+  - title: Senior Software Engineer
+    company: Ocado Technology
+    location: Sofia, Bulgaria
+    start: "Sep 2024"
+    end: "Present"
+    highlights:
+      - Took ownership and actively extending the robot mapping and path-planning software.
+      - Key figure in managing the UI translations for the mobile robot's UI.
+      - Part of a focus group responsible for launching the latest AMR of the company.
+      - Actively owned part of the handover process of the legacy code to our new structure.
+
+  - title: Senior Software Engineer
+    company: SoftServe Inc.
+    location: Sofia, Bulgaria
+    start: "Apr 2022"
+    end: "Sep 2024"
+    highlights:
+      - Owner of an ETL pipeline, written in Go. Improved the code and the overall performance with ~75%.
+      - Successfully completed an integration between a Next.js project and Contentful CSM.
+      - Extensively worked on the authentication layer, implementing SSO and SAML from scratch, enabling contracts worth over $11M.
+
+  - title: Software Engineer
+    company: World Bank Group
+    location: Sofia, Bulgaria
+    start: "Aug 2021"
+    end: "Apr 2022"
+    highlights:
+      - Implemented container management UI, based on podman and kaniko. Improved rate of delivery for production images.
+      - Successfully integrated ServiceNow with several internal systems and APIs.
+
+  - title: Full-stack Software Engineer
+    company: The Coca-Cola Company
+    location: Sofia, Bulgaria
+    start: "Nov 2019"
+    end: "Apr 2021"
+    highlights:
+      - Successfully migrated a legacy TypeScript running on CloudFormation templates to the Serverless framework, reducing deployment times with over 200%.
+      - Integrated a data migration pipeline with the Adobe Stack, enabling marketing teams to perform more detailed consumer analytics.
+      - Contributed to the development of the company's GDPR platform, ensuring compliancy with EU regulations and reducing risk of litigations.
+
+  - title: Software Developer
+    company: DXC Technology
+    location: Sofia, Bulgaria
+    start: "Dec 2018"
+    end: "Nov 2019"
+    highlights:
+      - Contributed to the development of an automated incident response system.
+      - Integrations with multiple internal APIs and MS Teams.
+
+education:
+  - degree: B.Sc. International Business and Management
+    institution: HAN University of Applied Sciences
+    location: Arnhem, The Netherlands
+    start: "2008"
+    end: "2013"
+    note: "Thesis: Distribution and value of voluntary health insurance in Bulgaria."

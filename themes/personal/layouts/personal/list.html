@@ -1,0 +1,57 @@
+{{ define "main" }}
+<div class="page-content">
+  <h1>{{ .Title }}</h1>
+
+  {{ $p := site.Data.personal }}
+
+  {{ with $p.family }}
+  <section class="personal-section">
+    <h2>Family</h2>
+    <p>{{ . }}</p>
+  </section>
+  {{ end }}
+
+  {{ with $p.hobbies }}
+  <section class="personal-section">
+    <h2>Hobbies</h2>
+    <ul class="personal-list">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ with $p.interests }}
+  <section class="personal-section">
+    <h2>Interests</h2>
+    <ul class="personal-list">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  <div class="personal-two-col">
+    {{ with $p.books }}
+    <section class="personal-section">
+      <h2>Favorite Books</h2>
+      <ul class="personal-list books">
+        {{ range . }}
+        <li>
+          <span class="item-title">{{ .title }}</span>
+          <span class="item-author">{{ .author }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+
+    {{ with $p.movies }}
+    <section class="personal-section">
+      <h2>Favorite Movies</h2>
+      <ul class="personal-list">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

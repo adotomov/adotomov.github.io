@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo server:*)",
+      "Bash(hugo build:*)",
+      "Bash(grep -E \"\\\\.html$\")",
+      "Bash(pkill -f \"hugo server\")"
+    ]
+  }
+}

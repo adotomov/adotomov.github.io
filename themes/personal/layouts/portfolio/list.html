@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="page-content">
+  <h1>{{ .Title }}</h1>
+
+  {{ if .Pages }}
+  <div class="portfolio-grid">
+    {{ range .Pages }}
+    <a href="{{ .RelPermalink }}" class="portfolio-card">
+      <h2>{{ .Title }}</h2>
+      {{ with .Params.tagline }}<p class="portfolio-tagline">{{ . }}</p>{{ end }}
+      {{ with .Params.tags }}
+      <div class="portfolio-tags">
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </a>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p class="empty-state">Projects coming soon.</p>
+  {{ end }}
+</div>
+{{ end }}

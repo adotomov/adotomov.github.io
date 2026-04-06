@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="page-content">
+  <h1>{{ .Title }}</h1>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Work Experience</h2>
+    {{ range site.Data.experience.jobs }}
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <div>
+          <span class="cv-role">{{ .title }}</span>
+          <span class="cv-company">{{ .company }}</span>
+        </div>
+        <div class="cv-meta">
+          <span class="cv-dates">{{ .start }} &ndash; {{ .end }}</span>
+          <span class="cv-location">{{ .location }}</span>
+        </div>
+      </div>
+      {{ with .highlights }}
+      <ul class="cv-highlights">
+        {{ range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+
+  <section class="cv-section">
+    <h2 class="cv-section-title">Education</h2>
+    {{ range site.Data.experience.education }}
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <div>
+          <span class="cv-role">{{ .degree }}</span>
+          <span class="cv-company">{{ .institution }}</span>
+        </div>
+        <div class="cv-meta">
+          <span class="cv-dates">{{ .start }} &ndash; {{ .end }}</span>
+          <span class="cv-location">{{ .location }}</span>
+        </div>
+      </div>
+      {{ with .note }}<p class="cv-note">{{ . }}</p>{{ end }}
+    </div>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

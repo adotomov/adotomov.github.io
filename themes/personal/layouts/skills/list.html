@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="page-content">
+  <h1>{{ .Title }}</h1>
+
+  <div class="skills-grid">
+    {{ range site.Data.skills.categories }}
+    <div class="skills-category">
+      <h2>{{ .name }}</h2>
+      <ul class="skills-list">
+        {{ range .skills }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

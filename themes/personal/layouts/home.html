@@ -1,0 +1,301 @@
+{{ define "main" }} {{/* ── Hero ───────────────────────────────────────────
+*/}}
+<section id="hero" class="section-hero">
+    <div class="hero-inner">
+        <div class="avatar-wrap">
+            <img src="/images/avatar.png" alt="{{ .Params.title }}" class="avatar-img">
+        </div>
+        <div class="hero-text-wrap">
+            <h1 class="hero-name">{{ .Params.title }}</h1>
+            <p class="hero-subtitle">{{ .Params.subtitle }}</p>
+            <div class="hero-contact-pdf"></div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span></span>
+        </div>
+    </div>
+</section>
+
+{{/* ── About ────────────────────────────────────────── */}}
+<section id="about" class="section-content reveal">
+    <div class="about-inner">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-layout">
+            <div class="about-left">
+                <p class="about-bio">{{ .Params.about }}</p>
+            </div>
+
+            <div class="about-right">
+                <div class="about-stats">
+                    {{ range .Params.stats }}
+                    <div class="stat-item">
+                        <span
+                            class="stat-value"
+                            data-target="{{ .value }}"
+                            data-suffix="{{ .suffix }}"
+                            >0{{ .suffix }}</span
+                        >
+                        <span class="stat-label">{{ .label }}</span>
+                    </div>
+                    {{ end }}
+                </div>
+
+                <div class="about-tags">
+                    {{ range .Params.tech }}
+                    <span class="about-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+
+        <div class="about-current">
+            <div class="current-pulse-wrap">
+                <span class="current-pulse"></span>
+                <span class="current-dot"></span>
+            </div>
+            <div class="current-body">
+                <span class="current-label">Currently Building</span>
+                <p class="current-text">{{ .Params.current_focus }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/* ── Experience ───────────────────────────────────── */}}
+<section id="experience" class="section-content reveal">
+    <div class="section-inner">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            {{ range site.Data.experience.jobs }}
+            <div class="timeline-entry">
+                <div class="timeline-marker"></div>
+                <div class="timeline-body">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="tl-role">{{ .title }}</span>
+                            <span class="tl-company">{{ .company }}</span>
+                        </div>
+                        <div class="tl-meta">
+                            <span class="tl-dates"
+                                >{{ .start }} &ndash; {{ .end }}</span
+                            >
+                            <span class="tl-location">{{ .location }}</span>
+                        </div>
+                    </div>
+                    {{ with .highlights }}
+                    <ul class="tl-highlights">
+                        {{ range . }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{/* ── Education ────────────────────────────────────── */}}
+<section id="education" class="section-content reveal">
+    <div class="section-inner">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            {{ range site.Data.experience.education }}
+            <div class="timeline-entry">
+                <div class="timeline-marker"></div>
+                <div class="timeline-body">
+                    <div class="timeline-header">
+                        <div>
+                            <span class="tl-role">{{ .degree }}</span>
+                            <span class="tl-company">{{ .institution }}</span>
+                        </div>
+                        <div class="tl-meta">
+                            <span class="tl-dates"
+                                >{{ .start }} &ndash; {{ .end }}</span
+                            >
+                            <span class="tl-location">{{ .location }}</span>
+                        </div>
+                    </div>
+                    {{ with .note }}
+                    <p class="tl-note">{{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{/* ── Skills ───────────────────────────────────────── */}}
+<section id="skills" class="section-content reveal">
+    <div class="section-inner">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            {{ range site.Data.skills.categories }}
+            <div class="skills-category">
+                <h3 class="skills-cat-name">{{ .name }}</h3>
+                {{ range .skills }}
+                <div class="skill-row">
+                    <div class="skill-label">
+                        <span class="skill-name">{{ .name }}</span>
+                        <span class="skill-pct">{{ .level }}%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-bar" data-level="{{ .level }}"></div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+{{/* ── Contact ──────────────────────────────────────── */}} {{- $c :=
+site.Data.contact }} {{- $encoded := dict "email" $c.email "phone" $c.phone
+"github" $c.github "linkedin" $c.linkedin | jsonify | base64Encode }}
+<section id="contact" class="section-content reveal">
+    <div class="section-inner">
+        <h2 class="section-title">Contact</h2>
+        <ul class="contact-list">
+            <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="M2 7l10 7 10-7" />
+                    </svg>
+                </span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value masked" data-field="email"
+                    >••••••••••••••••••••</span
+                >
+            </li>
+            <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                        />
+                    </svg>
+                </span>
+                <span class="contact-label">Phone</span>
+                <span class="contact-value masked" data-field="phone"
+                    >•••••••••••••••</span
+                >
+            </li>
+            <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
+                        />
+                    </svg>
+                </span>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value masked" data-field="github"
+                    >••••••••••••••••••</span
+                >
+            </li>
+            <li class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"
+                        />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value masked" data-field="linkedin"
+                    >••••••••••••••••••</span
+                >
+            </li>
+        </ul>
+        <div class="contact-actions">
+            <button class="btn-reveal" id="btn-show-details">Show Details</button>
+            <button class="btn-download-pdf" id="btn-download-pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download PDF
+            </button>
+        </div>
+    </div>
+    <script id="__cd" type="application/json">
+        {{ $encoded }}
+    </script>
+</section>
+
+{{/* ── Captcha Modal ────────────────────────────────── */}}
+<div
+    id="captcha-modal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="captcha-title"
+>
+    <div class="modal-card">
+        <button class="modal-close" id="modal-close" aria-label="Close">
+            &times;
+        </button>
+        <h3 id="captcha-title" class="modal-title">Verify you're human</h3>
+        <p class="modal-sub">Solve the problem to reveal contact details.</p>
+        <p
+            class="captcha-question"
+            id="captcha-question"
+            aria-live="polite"
+        ></p>
+        <div class="captcha-input-row">
+            <input
+                type="number"
+                id="captcha-input"
+                class="captcha-input"
+                placeholder="Your answer"
+                autocomplete="off"
+                aria-label="Answer"
+            />
+            <button class="btn-captcha-submit" id="captcha-submit">
+                Confirm
+            </button>
+        </div>
+        <p class="captcha-error" id="captcha-error" aria-live="assertive">
+            Incorrect — try again.
+        </p>
+    </div>
+</div>
+
+{{ end }}

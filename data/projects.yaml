@@ -1,0 +1,20 @@
+items:
+  - title: Project Alpha
+    description: A distributed task queue built for high-throughput workloads. Handles millions of jobs per day with sub-second latency.
+    tags: [Python, Redis, Docker]
+    url: "#"
+
+  - title: OpenMetrics Dashboard
+    description: Real-time observability dashboard aggregating metrics from multiple services into a single pane of glass.
+    tags: [React, TypeScript, Grafana API]
+    url: "#"
+
+  - title: Terraform Modules Library
+    description: A collection of reusable, battle-tested Terraform modules for provisioning cloud infrastructure on AWS.
+    tags: [Terraform, AWS, Go]
+    url: "#"
+
+  - title: Personal Page
+    description: This very website. Built with Hugo, custom theme, single-page scrolling layout.
+    tags: [Hugo, CSS, JavaScript]
+    url: "#"

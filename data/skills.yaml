@@ -1,0 +1,43 @@
+categories:
+  - name: Languages
+    skills:
+      - name: JavaScript / TypeScript
+        level: 100
+      - name: Go
+        level: 90
+      - name: Python
+        level: 50
+      - name: SQL
+        level: 80
+      - name: Bash
+        level: 75
+
+  - name: Frameworks & Libraries
+    skills:
+      - name: React
+        level: 100
+      - name: Node.js
+        level: 100
+      - name: Nest.js
+        level: 100
+      - name: Express
+        level: 100
+      - name: ros
+        level: 50
+
+  - name: Infrastructure & Tools
+    skills:
+      - name: Docker / Kubernetes
+        level: 75
+      - name: GitHub Actions
+        level: 75
+      - name: Terraform
+        level: 80
+      - name: PostgreSQL
+        level: 100
+      - name: Redis
+        level: 100
+      - name: Elastic
+        level: 75
+      - name: CircleCI
+        level: 100
