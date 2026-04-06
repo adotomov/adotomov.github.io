@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Adrian Tomov'
 theme = 'personal'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+
 [taxonomies]
 
 [menus]
