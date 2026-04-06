@@ -20,11 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.151.0'
-          extended: true
+      - name: Install Hugo
+        run: |
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_linux-amd64.deb
+          sudo dpkg -i hugo.deb
 
       - name: Configure Pages
         id: pages
