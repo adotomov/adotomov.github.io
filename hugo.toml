@@ -1,4 +1,7 @@
 baseURL = 'https://adotomov.github.io/'
+
+[params]
+  ga4MeasurementId = 'G-BGYQLRNKZM'
 languageCode = 'en-us'
 title = 'Adrian Tomov'
 theme = 'personal'

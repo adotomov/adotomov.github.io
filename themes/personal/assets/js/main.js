@@ -217,6 +217,13 @@ async function downloadPDF() {
     pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
   }).from(target).save();
 
+  if (typeof gtag === 'function') {
+    gtag('event', 'cv_download', {
+      event_category: 'engagement',
+      event_label: 'cv.pdf',
+    });
+  }
+
   document.body.classList.remove('export-mode');
   if (heroPdfContact) heroPdfContact.innerHTML = '';
   if (avatarImg && originalSrc) avatarImg.src = originalSrc;
