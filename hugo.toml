@@ -6,6 +6,10 @@ theme = 'personal'
 
 [params]
   ga4MeasurementId = 'G-BGYQLRNKZM'
+  description = 'Software engineer with 8+ years of experience with Node.js, TypeScript, and React. Fascinated with functional programming, good architecture, and distributed systems.'
+  keywords = 'Senior Software Engineer, Senior Engineer, Node.js, TypeScript, Go, Kubernetes, Docker, AWS, GCP, distributed systems, functional programming, React'
+  author = 'Adrian Tomov'
+  location = 'Sofia, Bulgaria'
 
 [caches]
   [caches.images]

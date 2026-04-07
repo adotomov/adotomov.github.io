@@ -1,0 +1,22 @@
+{{- if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.Params.author }}",
+  "jobTitle": "Senior Software Engineer",
+  "description": "{{ site.Params.description }}",
+  "url": "{{ site.BaseURL }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sofia",
+    "addressCountry": "BG"
+  },
+  "knowsAbout": [
+    "Node.js", "TypeScript", "Go", "React",
+    "Kubernetes", "Docker", "AWS", "GCP",
+    "Distributed Systems", "Functional Programming", "Microservices"
+  ]
+}
+</script>
+{{- end -}}
