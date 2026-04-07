@@ -1,10 +1,11 @@
 baseURL = 'https://adotomov.github.io/'
 
-[params]
-  ga4MeasurementId = 'G-BGYQLRNKZM'
 languageCode = 'en-us'
 title = 'Adrian Tomov'
 theme = 'personal'
+
+[params]
+  ga4MeasurementId = 'G-BGYQLRNKZM'
 
 [caches]
   [caches.images]
