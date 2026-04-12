@@ -1,7 +1,11 @@
 <header id="site-header">
   <nav>
+    {{- if eq .Section "blog" }}
+    <a href="/">Home</a>
+    {{- else }}
     {{- range site.Menus.main }}
     <a href="{{ .URL }}">{{ .Name }}</a>
+    {{- end }}
     {{- end }}
   </nav>
 </header>

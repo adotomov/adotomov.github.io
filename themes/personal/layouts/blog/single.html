@@ -1,0 +1,34 @@
+{{ define "main" }}
+<article class="blog-article">
+  <div class="blog-article-inner">
+
+    <a class="blog-back-btn" href="/blog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Back
+    </a>
+
+    <header class="blog-article-header">
+      <h1 class="blog-article-title">{{ .Title }}</h1>
+      <div class="blog-article-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <span class="blog-card-dot">·</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+      {{ with .Params.tags }}
+      <div class="blog-article-tags">
+        {{ range . }}
+        <span class="blog-tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </header>
+
+    <div class="blog-article-content">
+      {{ .Content }}
+    </div>
+
+  </div>
+</article>
+{{ end }}

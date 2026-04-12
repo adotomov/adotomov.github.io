@@ -31,3 +31,7 @@ theme = 'personal'
     name = 'Contact'
     url = '#contact'
     weight = 3
+  [[menus.main]]
+    name = 'Blog'
+    url = '/blog'
+    weight = 4
