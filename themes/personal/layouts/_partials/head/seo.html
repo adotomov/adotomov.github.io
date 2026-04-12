@@ -1,4 +1,4 @@
-{{- $description := .Description | default site.Params.description -}}
+{{- $description := .Description | default .Params.summary | default site.Params.description -}}
 {{- $keywords    := site.Params.keywords -}}
 {{- $author      := site.Params.author -}}
 {{- $canonical   := .Permalink -}}

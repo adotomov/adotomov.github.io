@@ -1568,6 +1568,58 @@ body.export-mode #contact { display: none !important; }
   border: 1px solid var(--border);
 }
 
+/* ── Blog Share ─────────────────────────────────────── */
+.blog-share {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.blog-share-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.blog-share-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.blog-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  color: var(--muted);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.blog-share-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+button.blog-share-btn {
+  cursor: pointer;
+  font: inherit;
+}
+
+.blog-share-btn:hover {
+  color: #fff;
+  border-color: rgba(233, 109, 94, 0.4);
+  background: var(--glass-b);
+}
+
 /* ── Blog responsive ────────────────────────────────── */
 @media (max-width: 640px) {
   .blog-article-title { font-size: 1.7rem; }
