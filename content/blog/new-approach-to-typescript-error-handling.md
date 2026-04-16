@@ -1,5 +1,5 @@
 ---
-title: Making TypeScript Error Handling a Compiler Concern, Not a Team Discipline
+title: Making TypeScript error handling a compiler concern, not a team discipline
 date: 2026-04-16
 summary: TypeScript's exception model makes error handling a matter of team discipline rather than something the compiler enforces, which means failure modes are invisible in function signatures and easy to miss until they surface in production.
 tags:
