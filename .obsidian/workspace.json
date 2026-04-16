@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/how-i-do-code-reviews.md",
+                "file": "content/blog/new-approach-to-typescript-error-handling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "how-i-do-code-reviews"
+              "title": "new-approach-to-typescript-error-handling"
             }
           }
         ]
@@ -183,10 +183,11 @@
   },
   "active": "ab036e5b24788f7a",
   "lastOpenFiles": [
+    "content/blog/how-i-do-code-reviews.md",
+    "content/blog/new-approach-to-typescript-error-handling.md",
+    "content/blog/_index.md",
     "public/blog/how-i-do-code-reviews/index.html",
     "public/blog/how-i-do-code-reviews",
-    "content/blog/the-case-for-functional-programming-in-typescript.md",
-    "content/blog/how-i-do-code-reviews.md",
-    "content/blog/_index.md"
+    "content/blog/the-case-for-functional-programming-in-typescript.md"
   ]
 }
