@@ -1,43 +1,48 @@
+# tier: Expert | Advanced | Proficient | Familiar
 categories:
   - name: Languages
     skills:
-      - name: JavaScript / TypeScript
-        level: 100
+      - name: TypeScript / JavaScript
+        tier: Expert
       - name: Go
-        level: 90
-      - name: Python
-        level: 50
+        tier: Advanced
       - name: SQL
-        level: 80
+        tier: Advanced
       - name: Bash
-        level: 75
+        tier: Proficient
+      - name: Python
+        tier: Familiar
 
-  - name: Frameworks & Libraries
+  - name: Backend & Frameworks
     skills:
-      - name: React
-        level: 100
       - name: Node.js
-        level: 100
-      - name: Nest.js
-        level: 100
+        tier: Expert
+      - name: NestJS
+        tier: Expert
       - name: Express
-        level: 100
-      - name: ros
-        level: 50
+        tier: Expert
+      - name: Temporal
+        tier: Advanced
+      - name: React
+        tier: Expert
+      - name: Vue.js
+        tier: Advanced
+      - name: ROS
+        tier: Familiar
 
-  - name: Infrastructure & Tools
+  - name: Data & Infrastructure
     skills:
-      - name: Docker / Kubernetes
-        level: 75
-      - name: GitHub Actions
-        level: 75
-      - name: Terraform
-        level: 80
       - name: PostgreSQL
-        level: 100
+        tier: Expert
       - name: Redis
-        level: 100
-      - name: Elastic
-        level: 75
+        tier: Advanced
+      - name: Docker / Kubernetes
+        tier: Advanced
+      - name: Terraform
+        tier: Advanced
+      - name: Elasticsearch
+        tier: Proficient
+      - name: GitHub Actions
+        tier: Advanced
       - name: CircleCI
-        level: 100
+        tier: Advanced

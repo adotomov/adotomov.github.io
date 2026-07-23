@@ -255,6 +255,9 @@ ul { list-style: none; }
   color: rgba(226, 223, 216, 0.88);
   font-weight: 400;
 }
+.about-bio p + p {
+  margin-top: 1.1rem;
+}
 
 /* ── About: right ──────────────────────────────────── */
 .about-right {
@@ -318,6 +321,77 @@ ul { list-style: none; }
   color: var(--orange);
   background: rgba(255, 151, 96, 0.07);
   transform: translateY(-2px);
+}
+
+/* ── Projects ──────────────────────────────────────── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-2);
+  color: var(--text);
+  transition: border-color 0.2s, transform 0.15s, background 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--orange);
+  background: rgba(255, 151, 96, 0.04);
+  transform: translateY(-3px);
+}
+
+.project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-family: 'Fira Code', ui-monospace, monospace;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.project-arrow {
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.2s, transform 0.15s;
+}
+
+.project-card:hover .project-arrow {
+  color: var(--orange);
+  transform: translate(2px, -2px);
+}
+
+.project-desc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(226, 223, 216, 0.72);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: rgba(226, 223, 216, 0.55);
 }
 
 /* Currently building */
@@ -524,9 +598,11 @@ ul { list-style: none; }
 }
 
 .skill-pct {
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   color: var(--muted);
-  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  align-self: center;
 }
 
 .skill-track {
@@ -1267,6 +1343,13 @@ body.export-mode .skill-bar    { background: linear-gradient(90deg, var(--coral)
 
 /* Hide contact section — already in hero */
 body.export-mode #contact { display: none !important; }
+
+/* Hide projects section from the CV export */
+body.export-mode #projects { display: none !important; }
+
+/* Tighten the Education → Skills gap in the export */
+body.export-mode #education { padding-bottom: 0.35rem; }
+body.export-mode #skills { padding-top: 0.6rem; }
 
 /* ── Responsive ────────────────────────────────────── */
 @media (max-width: 900px) {

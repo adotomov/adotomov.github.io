@@ -1,20 +1,10 @@
 items:
-  - title: Project Alpha
-    description: A distributed task queue built for high-throughput workloads. Handles millions of jobs per day with sub-second latency.
-    tags: [Python, Redis, Docker]
-    url: "#"
+  - title: explicit-ts
+    description: An open-source TypeScript library that makes error handling a compiler concern rather than a matter of team discipline. Brings Rust-style Result&lt;T, E&gt; types, structured tagged errors, ergonomic cancellation, and clean framework boundaries to everyday TypeScript — with zero runtime dependencies.
+    tags: [TypeScript, Open Source, Functional Programming]
+    url: "https://github.com/adotomov/explicit-ts"
 
-  - title: OpenMetrics Dashboard
-    description: Real-time observability dashboard aggregating metrics from multiple services into a single pane of glass.
-    tags: [React, TypeScript, Grafana API]
-    url: "#"
-
-  - title: Terraform Modules Library
-    description: A collection of reusable, battle-tested Terraform modules for provisioning cloud infrastructure on AWS.
-    tags: [Terraform, AWS, Go]
-    url: "#"
-
-  - title: Personal Page
-    description: This very website. Built with Hugo, custom theme, single-page scrolling layout.
+  - title: This site
+    description: A single-page portfolio built with Hugo and a hand-written custom theme — no page builder, no template bought off the shelf. Scroll-driven reveals, animated skill meters, and a static build deployed on GitHub Pages.
     tags: [Hugo, CSS, JavaScript]
-    url: "#"
+    url: ""

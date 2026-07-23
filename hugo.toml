@@ -28,10 +28,18 @@ theme = 'personal'
     url = '#about'
     weight = 2
   [[menus.main]]
-    name = 'Contact'
-    url = '#contact'
+    name = 'Experience'
+    url = '#experience'
     weight = 3
+  [[menus.main]]
+    name = 'Projects'
+    url = '#projects'
+    weight = 4
   [[menus.main]]
     name = 'Blog'
     url = '/blog'
-    weight = 4
+    weight = 5
+  [[menus.main]]
+    name = 'Contact'
+    url = '#contact'
+    weight = 6

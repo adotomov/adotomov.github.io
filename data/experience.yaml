@@ -5,10 +5,11 @@ jobs:
     start: "Sep 2024"
     end: "Present"
     highlights:
-      - Took ownership and actively extending the robot mapping and path-planning software.
-      - Key figure in managing the UI translations for the mobile robot's UI.
-      - Part of a focus group responsible for launching the latest AMR of the company.
-      - Actively owned part of the handover process of the legacy code to our new structure.
+      - Work across a distributed platform of 50+ interconnected systems that coordinate a fleet of 2,000+ autonomous mobile robots across warehouses from 50,000 to 500,000 sq ft, running millions of operations per day.
+      - Design and extend core robot workflow and planning logic — the algorithms and orchestration that determine how the fleet carries out work — along with integrations to upstream warehouse management systems.
+      - Ship operator-facing features that give warehouse teams richer visibility into and finer control over live robot activity.
+      - "Hardened application architecture and performance — removed misused singleton patterns, converted blocking synchronous operations to asynchronous, eliminated memory leaks, and optimized database access through targeted indexes and tuned SELECT statements."
+      - Became a go-to owner across multiple subsystems by driving structured handovers and building deep, first-hand knowledge of how they fit together.
 
   - title: Senior Software Engineer
     company: SoftServe Inc.
@@ -16,9 +17,9 @@ jobs:
     start: "Apr 2022"
     end: "Sep 2024"
     highlights:
-      - Owner of an ETL pipeline, written in Go. Improved the code and the overall performance with ~75%.
-      - Successfully completed an integration between a Next.js project and Contentful CSM.
-      - Extensively worked on the authentication layer, implementing SSO and SAML from scratch, enabling contracts worth over $11M.
+      - Rebuilt a Go-based ETL pipeline, increasing ingestion throughput 10× — from ~10,000 to 100,000+ items per hour — which cut a critical daily data load from 12+ hours to a few hours and lowered pipeline cost.
+      - Designed and built the authentication layer from scratch, implementing SSO and SAML, unlocking enterprise contracts worth over $11M.
+      - Integrated a Next.js application with Contentful CMS, giving content teams full control over the site without engineering involvement.
 
   - title: Software Engineer
     company: World Bank Group
@@ -26,8 +27,8 @@ jobs:
     start: "Aug 2021"
     end: "Apr 2022"
     highlights:
-      - Implemented container management UI, based on podman and kaniko. Improved rate of delivery for production images.
-      - Successfully integrated ServiceNow with several internal systems and APIs.
+      - Built a container-management UI on Podman and Kaniko, streamlining how production images were built and delivered.
+      - Integrated ServiceNow with multiple internal systems and APIs to automate cross-team workflows.
 
   - title: Full-stack Software Engineer
     company: The Coca-Cola Company
@@ -35,9 +36,9 @@ jobs:
     start: "Nov 2019"
     end: "Apr 2021"
     highlights:
-      - Successfully migrated a legacy TypeScript running on CloudFormation templates to the Serverless framework, reducing deployment times with over 200%.
-      - Integrated a data migration pipeline with the Adobe Stack, enabling marketing teams to perform more detailed consumer analytics.
-      - Contributed to the development of the company's GDPR platform, ensuring compliancy with EU regulations and reducing risk of litigations.
+      - Migrated a legacy TypeScript service from CloudFormation to the Serverless framework, cutting deployment time from 45–60 minutes to under 10 (~5× faster).
+      - Helped build the company's GDPR compliance platform during the EU rollout — designing RESTful APIs for user data, sync queues, and webhooks — keeping the business compliant and reducing litigation risk.
+      - Built a data-migration pipeline into the Adobe stack, enabling marketing teams to run richer consumer analytics.
 
   - title: Software Developer
     company: DXC Technology
@@ -45,8 +46,8 @@ jobs:
     start: "Dec 2018"
     end: "Nov 2019"
     highlights:
-      - Contributed to the development of an automated incident response system.
-      - Integrations with multiple internal APIs and MS Teams.
+      - Contributed to an automated incident-response system that reduced manual triage effort.
+      - Built integrations with multiple internal APIs and Microsoft Teams.
 
 education:
   - degree: B.Sc. International Business and Management
@@ -54,4 +55,4 @@ education:
     location: Arnhem, The Netherlands
     start: "2008"
     end: "2013"
-    note: "Thesis: Distribution and value of voluntary health insurance in Bulgaria."
+    note: "A business foundation rather than a computer-science one — which is exactly why I'm comfortable sitting between stakeholders and systems, turning business problems into technical implementations that hold up."

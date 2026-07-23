@@ -27,7 +27,7 @@
 
         <div class="about-layout">
             <div class="about-left">
-                <p class="about-bio">{{ .Params.about }}</p>
+                <div class="about-bio">{{ .Params.about | markdownify }}</div>
             </div>
 
             <div class="about-right">
@@ -137,21 +137,51 @@
     <div class="section-inner">
         <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
+            {{- $widths := dict "Expert" 100 "Advanced" 78 "Proficient" 55 "Familiar" 32 }}
             {{ range site.Data.skills.categories }}
             <div class="skills-category">
                 <h3 class="skills-cat-name">{{ .name }}</h3>
                 {{ range .skills }}
+                {{- $w := index $widths .tier | default 55 }}
                 <div class="skill-row">
                     <div class="skill-label">
                         <span class="skill-name">{{ .name }}</span>
-                        <span class="skill-pct">{{ .level }}%</span>
+                        <span class="skill-pct">{{ .tier }}</span>
                     </div>
                     <div class="skill-track">
-                        <div class="skill-bar" data-level="{{ .level }}"></div>
+                        <div class="skill-bar" data-level="{{ $w }}"></div>
                     </div>
                 </div>
                 {{ end }}
             </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{/* ── Projects ─────────────────────────────────────── */}}
+<section id="projects" class="section-content reveal">
+    <div class="section-inner">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            {{ range site.Data.projects.items }}
+            <a
+                class="project-card"
+                {{ with .url }}href="{{ . }}" target="_blank" rel="noopener"{{ end }}
+            >
+                <div class="project-head">
+                    <span class="project-title">{{ .title }}</span>
+                    {{ with .url }}
+                    <span class="project-arrow" aria-hidden="true">↗</span>
+                    {{ end }}
+                </div>
+                <p class="project-desc">{{ .description | safeHTML }}</p>
+                {{ with .tags }}
+                <div class="project-tags">
+                    {{ range . }}<span class="project-tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+            </a>
             {{ end }}
         </div>
     </div>
